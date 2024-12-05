@@ -10,21 +10,15 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="navbar  bg-dark p-4">
-        <span class="text-light">Admin Dashboard</span>    
-        <span class="text-light">Đăng xuất</span>    
-
+        <span class="text-light">Admin Dashboard</span>
+        <span class="text-light">Đăng xuất</span>
     </nav>
-
-    <!-- Content -->
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Danh sách bài báo</h2>
             <a href="#" class="btn btn-primary">Thêm bài báo mới</a>
         </div>
-
-        <!-- Table -->
         <table class="table table-bordered table-hover">
             <thead class="table-primary">
                 <tr>
@@ -46,7 +40,7 @@
                         <img src="https://via.placeholder.com/100" class="img-fluid" alt="Hình ảnh bài báo">
                     </td>
                     <td>
-                    <div class="my-4 btns text-center">
+                        <div class="my-4 btns text-center">
                             <a href="#" class="btn btn-success ">Sửa</a>
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">Xóa</button>
                         </div>
@@ -70,8 +64,6 @@
             </tbody>
         </table>
     </div>
-
-    <!-- Delete Modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -89,11 +81,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

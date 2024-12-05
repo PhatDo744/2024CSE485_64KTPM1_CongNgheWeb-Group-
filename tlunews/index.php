@@ -10,18 +10,12 @@
 </head>
 
 <body>
-
     <nav class="navbar  bg-dark p-4">
         <span class="text-light">Tin Tức Online</span>
         <span class="text-light">Đăng nhập</span>
     </nav>
-
-    
-
-
     <div class="container mt-5">
         <div class="row">
-
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Hình ảnh bài báo">
@@ -31,7 +25,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Hình ảnh bài báo">
@@ -41,8 +34,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Hình ảnh bài báo">
@@ -54,8 +45,6 @@
             </div>
         </div>
     </div>
-
-    
 </body>
 
 </html>

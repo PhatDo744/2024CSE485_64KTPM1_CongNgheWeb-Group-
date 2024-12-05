@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi tiết bài báo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,18 +17,12 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-
                 <h1 class="mb-4">Bài báo: Tiêu đề nổi bật</h1>
-
-
                 <p class="text-muted">
                     <strong>Ngày đăng:</strong> 2024-12-05 |
                     <strong>Danh mục:</strong> Công nghệ
                 </p>
-
-
                 <img src="https://via.placeholder.com/800x400" alt="Hình ảnh bài báo" class="img-fluid mb-4">
-
                 <div>
                     <h4 class="mb-3">Nội dung bài viết</h4>
                     <p>
@@ -38,21 +33,11 @@
                         Hãy tiếp tục đọc để khám phá thêm nhiều thông tin hấp dẫn, giúp bạn cập nhật những kiến thức bổ ích và thú vị nhất!
                     </p>
                 </div>
-
-
-               
-
-
                 <div class="mt-4">
-                    
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
 </body>
 
 </html>
