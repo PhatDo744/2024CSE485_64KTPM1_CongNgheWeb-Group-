@@ -45,7 +45,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Bài báo 1: Tiêu đề thú vị</h5>
                         <p class="card-text">Mô tả ngắn về bài báo này. Đây là một bài báo quan trọng về công nghệ.</p>
-                        <a href="detail.html?id=1" class="btn btn-primary">Chi tiết</a>
+                      
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Bài báo 2: Khám phá không gian</h5>
                         <p class="card-text">Cập nhật những thông tin mới nhất về vũ trụ và khoa học.</p>
-                        <a href="detail.html?id=2" class="btn btn-primary">Chi tiết</a>
+                      
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Bài báo 3: Tin tức giải trí</h5>
                         <p class="card-text">Thông tin giải trí mới nhất dành cho bạn.</p>
-                        <a href="detail.html?id=3" class="btn btn-primary">Chi tiết</a>
+                      
                     </div>
                 </div>
             </div>
