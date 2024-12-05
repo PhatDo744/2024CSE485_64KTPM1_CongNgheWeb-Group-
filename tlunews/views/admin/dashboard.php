@@ -5,27 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Quản lý bài báo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Admin Dashboard</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    
-                    <li class="nav-item">
-                        <a class="nav-link text-danger" href="#">Đăng xuất</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar  bg-dark p-4">
+        <span class="text-light">Admin Dashboard</span>    
+        <span class="text-light">Đăng xuất</span>    
+
     </nav>
 
     <!-- Content -->
@@ -37,7 +26,7 @@
 
         <!-- Table -->
         <table class="table table-bordered table-hover">
-            <thead class="table-dark">
+            <thead class="table-primary">
                 <tr>
                     <th>STT</th>
                     <th>Tiêu đề bài báo</th>
@@ -57,8 +46,10 @@
                         <img src="https://via.placeholder.com/100" class="img-fluid" alt="Hình ảnh bài báo">
                     </td>
                     <td>
-                        <a href="#" class="btn btn-success btn-sm">Sửa</a>
-                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">Xóa</button>
+                    <div class="my-4 btns text-center">
+                            <a href="#" class="btn btn-success ">Sửa</a>
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">Xóa</button>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -70,8 +61,10 @@
                         <img src="https://via.placeholder.com/100" class="img-fluid" alt="Hình ảnh bài báo">
                     </td>
                     <td>
-                        <a href="#" class="btn btn-success btn-sm">Sửa</a>
-                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">Xóa</button>
+                        <div class="my-4 btns text-center">
+                            <a href="#" class="btn btn-success ">Sửa</a>
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">Xóa</button>
+                        </div>
                     </td>
                 </tr>
             </tbody>
