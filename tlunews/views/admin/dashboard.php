@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar  bg-dark p-4">
         <span class="text-light">Admin Dashboard</span>
-        <span class="text-light">Đăng xuất</span>
+        <span class="text-light"><a class="nav-link" href="../../index.php">Đăng xuất</a></span>
     </nav>
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
