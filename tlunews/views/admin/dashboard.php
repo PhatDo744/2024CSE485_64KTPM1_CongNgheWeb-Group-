@@ -12,7 +12,10 @@
 <body>
     <nav class="navbar  bg-dark p-4">
         <span class="text-light">Admin Dashboard</span>
-        <span class="text-light"><a class="nav-link" href="../../index.php">Đăng xuất</a></span>
+        <div class="ml-auto">
+            <span class="text-light ms-auto"><a class="nav-link" href="../../index.php">Đăng xuất</a></span>
+            <span class="text-light ms-3"><a class="nav-link" href="./user_management.php">QLTK</a></span>
+        </div>
     </nav>
     <div class="container mt-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
