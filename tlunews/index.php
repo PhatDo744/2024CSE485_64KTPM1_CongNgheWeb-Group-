@@ -69,4 +69,13 @@ if ($controller == 'AdminController') {
             header('Location: ./views/home/index.php');
             break;
     }
+else if ($controller == 'NewsController') {
+    $controllerOJ = new NewsController();
+    if ($action == 'add')
+        $controllerOJ->addNews();
+    else if ($action == 'edit')
+        $controllerOJ->editNews();
+    else
+        $controllerOJ->deleteNews();
+} 
 }

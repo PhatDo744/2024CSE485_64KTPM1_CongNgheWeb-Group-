@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,26 @@
     <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container mt-5">
         <h1 class="text-center mb-4">Add News</h1>
-        <form action="add_news.php" method="POST" enctype="multipart/form-data">
+        <form action="../../../index.php?controller=NewsController&action=add" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" ame="title" required>
+                <input type="text" class="form-control" name="title" required>
             </div>
             <div class="mb-3">
                 <label for="content" class="form-label">Content</label>
-                <input class="form-control"  name="content" rows="5" required>
+                <input class="form-control" name="content" rows="5" required>
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
-                <input type="file" class="form-control" ame="image" accept="image/*">
+                <input type="file" class="form-control" name="image" accept="image/*">
             </div>
             <div class="mb-3">
                 <label for="category" class="form-label">Category</label>
-                <select class="form-select" name="category_id" required>
+                <select class="form-select" name="category" required>
                     <option value="" disabled selected>Select a category</option>
                     <option value="1">Technology</option>
                     <option value="2">Health</option>
@@ -38,4 +40,5 @@
         </form>
     </div>
 </body>
+
 </html>
