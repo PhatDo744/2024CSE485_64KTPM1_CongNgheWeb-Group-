@@ -41,4 +41,19 @@ if ($controller = 'AdminController') {
             echo "Trang không tồn tại.";
             exit();
     }
+    if ($controller == 'NewsController') {
+        $controllerOJ = new NewsController();
+        if ($action == 'add')
+            $controllerOJ->addNews();
+        else if ($action == 'edit')
+            $controllerOJ->editNews();
+        else
+            $controllerOJ->deleteNews();
+    } else if ($controller == 'HomeController') {
+        $controllerOJ = new HomeController();
+        if ($action == 'index')
+            $controllerOJ->index();
+        else
+            $controllerOJ->detail();
+    }
 }
