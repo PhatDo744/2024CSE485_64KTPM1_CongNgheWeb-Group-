@@ -19,7 +19,7 @@
         $userModel = new User();
         $user = $userModel->getUserById($_GET['id']);
         ?>
-        <form id="editUserForm" method="POST" action="../../../index.php?action=updateUser">
+        <form id="editUserForm" method="POST" action="../../../index.php?controller=AdminController&action=updateUser">
             <input type="hidden" id="editUserId" name="id" value="<?php echo $user['id']; ?>">
             <div class="mb-3">
                 <label for="editUsername" class="form-label">Tên đăng nhập</label>

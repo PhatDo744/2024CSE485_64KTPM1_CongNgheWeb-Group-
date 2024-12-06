@@ -71,7 +71,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                    <form method="POST" action="../../index.php?action=deleteUser">
+                    <form method="POST" action="../../index.php?controller=AdminController&action=deleteUser">
                         <input type="hidden" id="deleteUserId" name="id">
                         <button type="submit" class="btn btn-danger">Xóa</button>
                     </form>
