@@ -15,6 +15,9 @@ $news = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="../../assets/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/script.js"></script>
 </head>
 
 <body>
@@ -23,6 +26,31 @@ $news = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <span class="text-light ms-auto"><a class="nav-link" href="../../index.php">Đăng xuất</a></span>
     </nav>
     <div class="container mt-5">
+        <form id="searchForm">
+            <div class="form-group mb-3">
+                <label for="category">Chọn thể loại:</label>
+                <select name="category" id="category" class="form-control">
+                    <option value="1">Technology</option>
+                    <option value="2">Health</option>
+                    <option value="3">Sports</option>
+                    <option value="4">Entertainment</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        </form>
+
+        <div class="modal fade" id="searchModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Kết quả tìm kiếm</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <?php foreach ($news as $index => $new): ?>
                 <div class="col-md-4 mb-4">

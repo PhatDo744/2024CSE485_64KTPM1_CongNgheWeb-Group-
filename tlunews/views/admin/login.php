@@ -15,7 +15,7 @@
         <?php if (isset($_GET['error']) && $_GET['error'] === 'invalid_credentials'): ?>
             <div class="alert alert-danger">Tên đăng nhập hoặc mật khẩu không đúng.</div>
         <?php endif; ?>
-        <form method="post" action="/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/index.php?action=login">
+        <form method="post" action="/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/index.php?controller=AdminController&action=login">
             <div class="form-group">
                 <label for="username" class="form-label">Tên đăng nhập:</label>
                 <input type="text" id="username" name="username" class="form-control" required>
