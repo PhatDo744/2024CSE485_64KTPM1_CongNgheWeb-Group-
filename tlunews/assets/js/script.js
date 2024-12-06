@@ -1,13 +1,13 @@
 $(document).ready(function () {
   $("#searchForm").on("submit", function (e) {
     e.preventDefault();
-
     const categoryId = $("#category").val();
 
     $.ajax({
-      url: "../../index.php", // Changed from HomeController.php to index.php
-      type: "GET",
+      url: "../../index.php",
+      type: "get",
       data: {
+        controller: "HomeController",
         action: "search",
         category: categoryId,
       },

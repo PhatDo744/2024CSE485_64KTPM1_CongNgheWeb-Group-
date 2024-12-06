@@ -8,43 +8,47 @@ session_start();
 $controller = '';
 $action = 'home';
 
+// Lấy controller từ request
 if (isset($_GET['controller'])) {
     $controller = $_GET['controller'];
-}
-if (isset($_GET['action'])) {
-    $action = $_GET['action'];
+} else if (isset($_POST['controller'])) {
+    $controller = $_POST['controller'];
 }
 
-// Handle AJAX search request
-if (isset($_GET['action']) && $_GET['action'] === 'search') {
-    $homeController = new HomeController();
-    $homeController->handleAjaxSearch();
+// Lấy action từ request 
+if (isset($_GET['action'])) {
+    $action = $_GET['action'];
+} else if (isset($_POST['action'])) {
+    $action = $_POST['action'];
+}
+
+// Xử lý routing
+if ($controller == '') {
+    header('Location: ./views/admin/login.php');
     exit();
 }
 
-// Original routing logic
 if ($controller == 'AdminController') {
-    $controller = new AdminController();
+    $controllerInstance = new AdminController();
     switch ($action) {
         case 'login':
-            $controller->login();
+            $controllerInstance->login();
             break;
         case 'manageUsers':
-            $controller->manageUsers();
+            $controllerInstance->manageUsers();
             break;
         case 'addUser':
-            $controller->addUser();
+            $controllerInstance->addUser();
             break;
         case 'updateUser':
-            $controller->updateUser();
+            $controllerInstance->updateUser();
             break;
         case 'deleteUser':
-            $controller->deleteUser();
+            $controllerInstance->deleteUser();
             break;
         case 'logout':
             session_destroy();
             header('Location: ./views/admin/login.php');
-
             exit();
         case 'home':
             header('Location: ./views/admin/login.php');
@@ -52,5 +56,17 @@ if ($controller == 'AdminController') {
         default:
             echo "Trang không tồn tại.";
             exit();
+    }
+} else if ($controller == 'HomeController') {
+    $controllerInstance = new HomeController();
+    switch ($action) {
+        case 'search':
+            if (isset($_GET['category'])) {
+                $controllerInstance->handleAjaxSearch();
+            }
+            break;
+        default:
+            header('Location: ./views/home/index.php');
+            break;
     }
 }

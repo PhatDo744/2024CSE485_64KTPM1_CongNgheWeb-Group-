@@ -31,7 +31,6 @@
             <button type="submit" class="btn btn-primary">Tìm kiếm</button>
         </form>
 
-        <!-- Modal -->
         <div class="modal fade" id="searchModal" tabindex="-1">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
