@@ -4,7 +4,7 @@ require_once 'controllers/HomeController.php';
 
 $controller = '';
 
-$user = 1;
+$user = 0;
 $action = '';
 if (isset($_GET['controller']))
     $controller = $_GET['controller'];

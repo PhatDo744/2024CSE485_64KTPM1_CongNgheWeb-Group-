@@ -13,7 +13,6 @@ $news = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ - Danh sách bài báo</title>
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="../../assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -21,7 +20,6 @@ $news = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <nav class="navbar  bg-dark p-4">
         <span class="text-light">Tin Tức Online</span>
         <div class="group">
-            <i class="fa-solid fa-magnifying-glass text-light mx-2"></i>
             <span span class="text-light">Đăng xuất</span>
         </div>
     </nav>
