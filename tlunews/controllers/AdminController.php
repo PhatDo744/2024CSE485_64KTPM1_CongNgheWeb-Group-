@@ -24,17 +24,17 @@ class AdminController
                 $_SESSION['user'] = $user;
 
                 if ($user['role'] == 1) {
-                    header('Location: /Web_Group/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/dashboard.php');
+                    header('Location: /2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/dashboard.php');
                 } elseif ($user['role'] == 0) {
-                    header('Location: /Web_Group/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/home/index.php');
+                    header('Location: /2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/home/index.php');
                 }
                 exit();
             } else {
-                header('Location: /Web_Group/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/login.php?action=login&error=invalid_credentials');
+                header('Location: /2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/login.php?action=login&error=invalid_credentials');
                 exit();
             }
         } else {
-            header('Location: /Web_Group/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/login.php');
+            header('Location: /2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/login.php');
             exit();
         }
     }
@@ -53,7 +53,7 @@ class AdminController
             $role = $_POST['role'];
 
             $this->userModel->addUser($username, $password, $role);
-            header('Location: /Web_Group/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/user_management.php');
+            header('Location: /2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/user_management.php');
             exit();
         } else {
             require_once __DIR__ . '/../views/admin/users/add.php';
@@ -69,7 +69,7 @@ class AdminController
             $role = $_POST['role'];
 
             $this->userModel->updateUser($id, $username, $password, $role);
-            header('Location: /Web_Group/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/user_management.php');
+            header('Location: /2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/user_management.php');
             exit();
         } else {
             $id = $_GET['id'];
@@ -84,7 +84,7 @@ class AdminController
             $id = $_POST['id'];
 
             $this->userModel->deleteUser($id);
-            header('Location: /Web_Group/2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/user_management.php');
+            header('Location: /2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/user_management.php');
             exit();
         }
     }
