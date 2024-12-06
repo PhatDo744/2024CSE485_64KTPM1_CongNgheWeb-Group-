@@ -12,7 +12,7 @@
 <body>
     <div class="container mt-4">
         <h2>Thêm tài khoản mới</h2>
-        <form id="addUserForm" method="POST" action="../../../index.php?action=addUser">
+        <form id="addUserForm" method="POST" action="../../../index.php?controller=AdminController&action=addUser">
             <div class="mb-3">
                 <label for="username" class="form-label">Tên đăng nhập</label>
                 <input type="text" class="form-control" id="username" name="username" required>
