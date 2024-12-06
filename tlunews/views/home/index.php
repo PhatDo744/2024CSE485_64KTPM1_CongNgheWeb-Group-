@@ -7,6 +7,9 @@
     <title>Trang chủ - Danh sách bài báo</title>
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../assets/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/script.js"></script>
 </head>
 
 <body>
@@ -15,6 +18,32 @@
         <span class="text-light ms-auto"><a class="nav-link" href="../../index.php">Đăng xuất</a></span>
     </nav>
     <div class="container mt-5">
+        <form id="searchForm">
+            <div class="form-group mb-3">
+                <label for="category">Chọn thể loại:</label>
+                <select name="category" id="category" class="form-control">
+                    <option value="1">Technology</option>
+                    <option value="2">Health</option>
+                    <option value="3">Sports</option>
+                    <option value="4">Entertainment</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        </form>
+
+        <!-- Modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Kết quả tìm kiếm</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card">

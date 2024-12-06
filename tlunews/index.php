@@ -2,16 +2,28 @@
 require './config/config.php';
 require './models/User.php';
 require './controllers/AdminController.php';
-
+require './controllers/HomeController.php';
 
 session_start();
 $controller = '';
 $action = 'home';
-if (isset($_GET['controller']))
+
+if (isset($_GET['controller'])) {
     $controller = $_GET['controller'];
-if (isset($_GET['action']))
+}
+if (isset($_GET['action'])) {
     $action = $_GET['action'];
-if ($controller = 'AdminController') {
+}
+
+// Handle AJAX search request
+if (isset($_GET['action']) && $_GET['action'] === 'search') {
+    $homeController = new HomeController();
+    $homeController->handleAjaxSearch();
+    exit();
+}
+
+// Original routing logic
+if ($controller == 'AdminController') {
     $controller = new AdminController();
     switch ($action) {
         case 'login':
