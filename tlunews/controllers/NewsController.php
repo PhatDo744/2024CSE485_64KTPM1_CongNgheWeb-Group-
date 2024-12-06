@@ -21,7 +21,7 @@ class NewsController
             // Handle image upload
             $image = null;
             if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-                $uploadDir = '/tlunews/assets/images/';
+                $uploadDir = '2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/assets/images/';
                 $imagePath = $uploadDir . basename($_FILES["image"]["name"]);
                 move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath);
                 $image = $imagePath;
@@ -31,7 +31,7 @@ class NewsController
             $this->newsModel->addNews($title, $content, $image, $category, $created_at);
 
             // Redirect to success page or news list
-            header('Location: /tlunews/views/admin/dashboard.php');
+            header('Location: 2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/dashboard.php');
         }
     }
 
@@ -47,7 +47,7 @@ class NewsController
             // Handle image upload
             $image = null;
             if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-                $uploadDir = '../../assets/images/';
+                $uploadDir = '2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/assets/images/';
                 $imagePath = $uploadDir . basename($_FILES["image"]["name"]);
                 move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath);
                 $image = $imagePath;
@@ -55,7 +55,7 @@ class NewsController
 
             $this->newsModel->editNews($id, $title, $content, $image, $category);
 
-            header('Location: /tlunews/views/admin/dashboard.php');
+            header('Location: 2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/dashboard.php');
             exit();
         }
 
@@ -69,7 +69,7 @@ class NewsController
         $this->newsModel->deleteNews($id);
 
         // Redirect to news list after deleting
-        header('Location: /tlunews/views/admin/dashboard.php');
+        header('Location: 2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/dashboard.php');
         exit();
     }
 }

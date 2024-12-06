@@ -11,7 +11,7 @@ class HomeController
     {
         $news = $this->newsModel->getAllNews();
         header('Location: /tlunews/views/news/index.php');
-        require_once __DIR__ . '/../views/home/index.php';
+        require_once __DIR__ . '2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/home/index.php';
     }
     public function detail()
     {
