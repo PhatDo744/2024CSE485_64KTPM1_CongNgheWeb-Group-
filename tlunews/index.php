@@ -3,6 +3,7 @@ require './config/config.php';
 require './models/User.php';
 require './controllers/AdminController.php';
 require './controllers/HomeController.php';
+require './controllers/NewsController.php';
 
 session_start();
 $controller = '';
@@ -65,11 +66,14 @@ if ($controller == 'AdminController') {
                 $controllerInstance->handleAjaxSearch();
             }
             break;
+        case 'detail':
+            $controllerInstance->detail();
+            break;
         default:
             header('Location: ./views/home/index.php');
             break;
     }
-else if ($controller == 'NewsController') {
+} else if ($controller == 'NewsController') {
     $controllerOJ = new NewsController();
     if ($action == 'add')
         $controllerOJ->addNews();
@@ -77,5 +81,4 @@ else if ($controller == 'NewsController') {
         $controllerOJ->editNews();
     else
         $controllerOJ->deleteNews();
-} 
 }

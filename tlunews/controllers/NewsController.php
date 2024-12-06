@@ -30,11 +30,9 @@ class NewsController
             // Use model to add news
             $this->newsModel->addNews($title, $content, $image, $category, $created_at);
 
-            // Redirect to success page or news list
             header('Location: /2024CSE485_64KTPM1_CongNgheWeb_Group/tlunews/views/admin/dashboard.php');
         }
     }
-
     // Method to handle editing news
     public function editNews()
     {
