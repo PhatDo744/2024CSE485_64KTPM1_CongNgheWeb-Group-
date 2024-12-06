@@ -22,7 +22,7 @@
                     <strong>Ngày đăng:</strong> <?= $new['created_at'] ?> |
                     <strong>Danh mục:</strong> <?= $new['category_id'] ?>
                 </p>
-                <img src="https://via.placeholder.com/800x400" alt="Hình ảnh bài báo" class="img-fluid mb-4">
+                <img src="<?= $new['image'] ?>" alt="Hình ảnh bài báo" class="img-fluid mb-4">
                 <div>
                     <h4 class="mb-3">Nội dung bài viết</h4>
                     <p>
