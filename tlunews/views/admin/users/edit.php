@@ -16,10 +16,10 @@
         require_once __DIR__ . '/../../../config/config.php';
         require_once __DIR__ . '/../../../models/User.php';
 
-        $userModel = new User($pdo);
+        $userModel = new User();
         $user = $userModel->getUserById($_GET['id']);
         ?>
-        <form id="editUserForm" method="POST" action="../../../controllers/AdminController.php?action=updateUser">
+        <form id="editUserForm" method="POST" action="../../../index.php?action=updateUser">
             <input type="hidden" id="editUserId" name="id" value="<?php echo $user['id']; ?>">
             <div class="mb-3">
                 <label for="editUsername" class="form-label">Tên đăng nhập</label>

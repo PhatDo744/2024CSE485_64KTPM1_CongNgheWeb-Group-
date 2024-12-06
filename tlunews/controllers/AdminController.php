@@ -1,17 +1,14 @@
 <?php
 
 require_once __DIR__ . '/../models/User.php';
-require_once __DIR__ . '/../config/config.php';
 
 class AdminController
 {
-    private $pdo;
     private $userModel;
 
-    public function __construct($pdo)
+    public function __construct()
     {
-        $this->pdo = $pdo;
-        $this->userModel = new User($this->pdo);
+        $this->userModel = new User();
     }
 
     public function login()
@@ -91,34 +88,4 @@ class AdminController
             exit();
         }
     }
-
-    public function handleRequest()
-    {
-        $action = $_GET['action'] ?? null;
-
-        switch ($action) {
-            case 'login':
-                $this->login();
-                break;
-            case 'manageUsers':
-                $this->manageUsers();
-                break;
-            case 'addUser':
-                $this->addUser();
-                break;
-            case 'updateUser':
-                $this->updateUser();
-                break;
-            case 'deleteUser':
-                $this->deleteUser();
-                break;
-            default:
-                // Default action or error handling
-                break;
-        }
-    }
 }
-
-// Instantiate the controller and handle the request
-$controller = new AdminController($pdo);
-$controller->handleRequest();

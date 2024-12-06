@@ -37,7 +37,7 @@
                 require_once __DIR__ . '/../../config/config.php';
                 require_once __DIR__ . '/../../models/User.php';
 
-                $userModel = new User($pdo);
+                $userModel = new User();
                 $users = $userModel->getAllUsers();
 
                 foreach ($users as $index => $user) {
@@ -71,7 +71,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                    <form method="POST" action="../../controllers/AdminController.php?action=deleteUser">
+                    <form method="POST" action="../../index.php?action=deleteUser">
                         <input type="hidden" id="deleteUserId" name="id">
                         <button type="submit" class="btn btn-danger">Xóa</button>
                     </form>

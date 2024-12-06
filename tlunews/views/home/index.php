@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar  bg-dark p-4">
         <span class="text-light">Tin Tức Online</span>
-        <span class="text-light"><a class="nav-link" href="../admin/login.php">Đăng nhập</a></span>
+        <span class="text-light ms-auto"><a class="nav-link" href="../../index.php">Đăng xuất</a></span>
     </nav>
     <div class="container mt-5">
         <div class="row">

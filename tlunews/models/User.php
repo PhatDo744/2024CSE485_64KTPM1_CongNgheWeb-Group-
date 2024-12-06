@@ -1,11 +1,12 @@
 <?php
-
+require_once __DIR__ . "/../config/config.php";
 class User
 {
     private $pdo;
 
-    public function __construct($pdo)
+    public function __construct()
     {
+        global $pdo;
         $this->pdo = $pdo;
     }
 
